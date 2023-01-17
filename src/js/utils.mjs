@@ -5,6 +5,18 @@ export function qs(selector, parent = document) {
 // or a more concise version if you are into that sort of thing:
 // export const qs = (selector, parent = document) => parent.querySelector(selector);
 
+// Generates a random combination of characters for each localStorage item's key
+// All credits of this function go to Corylus: https://stackoverflow.com/questions/59530970/how-to-get-a-random-number-letter-combination-in-javascript
+export function generateKey() {
+  var characters =
+      "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789",
+    key = "";
+  for (var i = 0, n = characters.length; i < 62; ++i) {
+    key += characters.charAt(Math.floor(Math.random() * n));
+  }
+  return key;
+}
+
 // retrieve data from localstorage
 export function getLocalStorage(key) {
   return JSON.parse(localStorage.getItem(key));
