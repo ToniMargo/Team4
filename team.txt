@@ -1,7 +1,7 @@
 Team Trello board: https://trello.com/b/A4KJj9Ml/sleepoutside
 
 Team members:
--
+- Stephen Sanders
 - Francisco Franco
 - Antonio Martinez
 - Alma Benavides
