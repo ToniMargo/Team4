@@ -17,6 +17,11 @@ export function generateKey() {
   return key;
 }
 
+export function limitNumberoFItems(list,value){
+  let limited = list.slice(value);
+  return limited;
+}
+
 // retrieve data from localstorage
 export function getLocalStorage(key) {
   return JSON.parse(localStorage.getItem(key));

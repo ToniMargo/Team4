@@ -1,4 +1,4 @@
-import { renderListWithTemplate } from "./utils.mjs";
+import { renderListWithTemplate,limitNumberoFItems } from "./utils.mjs";
 
 function productCardTemplate(product) {
   return `<li class="product-card">
@@ -26,11 +26,16 @@ export default class ProductList {
     renderListWithTemplate(productCardTemplate, this.listElement, list);
   }
 
+
   async init() {
+    
     // our dataSource will return a Promise...so we can use await to resolve it.
     const list = await this.dataSource.getData();
+    console.log(list);
+    let limitItems = limitNumberoFItems(list,2);
     // render the list
-    this.renderList(list);
+    this.renderList(limitItems);
     //this.listElement.innerHTML = htmlItems.join("");
   }
+
 }
