@@ -64,3 +64,27 @@ export function renderListWithTemplate(
   }
   parentElement.insertAdjacentHTML(position, htmlStrings.join(""));
 }
+
+export function renderWithTemplate(template, parentElement, data, callback) {
+  parentElement.insertAdjacentHTML("afterbegin", template);
+  //if there is a callback...call it and pass data
+  if (callback) {
+    callback(data);
+  }
+}
+
+async function loadTemplate(path) {
+  const res = await fetch(path);
+  const template = await res.text();
+  return template;
+}
+
+export async function loadHeaderFooter(){
+  const headerCode = await loadTemplate("../partials/header.html");
+  const footerCode = await loadTemplate("../partials/footer.html");
+  const header = document.querySelector("#main-header");
+  const footer = document.querySelector("#main-footer");
+
+  renderWithTemplate(headerCode, header);
+  renderWithTemplate(footerCode, footer);
+}
