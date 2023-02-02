@@ -17,7 +17,19 @@ export function generateKey() {
   return key;
 }
 
-export function limitNumberoFItems(list,value){
+export function getCartContent() {
+  const cartItems = [];
+  let itemKey = "";
+  for (let i = 0; i < localStorage.length; i++) {
+    itemKey = localStorage.key(i);
+    cartItems.push(getLocalStorage(itemKey));
+  }
+  // const htmlItems = cartItems.map((item) => cartItemTemplate(item));
+  // document.querySelector(".product-list").innerHTML = htmlItems.join("");
+  return cartItems;
+}
+
+export function limitNumberoFItems(list, value) {
   let limited = list.slice(value);
   return limited;
 }
@@ -79,11 +91,11 @@ async function loadTemplate(path) {
   return template;
 }
 
-export async function loadHeaderFooter(){
+export async function loadHeaderFooter() {
   const headerCode = await loadTemplate("../partials/header.html");
   const footerCode = await loadTemplate("../partials/footer.html");
-  const header = document.querySelector("#main-header");
-  const footer = document.querySelector("#main-footer");
+  const header = document.querySelector("header");
+  const footer = document.querySelector("footer");
 
   renderWithTemplate(headerCode, header);
   renderWithTemplate(footerCode, footer);
