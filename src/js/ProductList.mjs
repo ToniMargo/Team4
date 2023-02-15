@@ -2,9 +2,9 @@ import { renderListWithTemplate, limitNumberoFItems } from "./utils.mjs";
 
 function productCardTemplate(product) {
   return `<li class="product-card">
-    <a href="product_pages/index.html?product=${product.Id}">
+    <a href="../product_pages/index.html?product=${product.Id}">
     <img
-      src="${product.Image}"
+      src="${product.Images.PrimaryMedium}"
       alt="Image of ${product.Name}"
     />
     <h3 class="card__brand">${product.Brand.Name}</h3>
@@ -28,11 +28,9 @@ export default class ProductList {
 
   async init() {
     // our dataSource will return a Promise...so we can use await to resolve it.
-    const list = await this.dataSource.getData();
-    console.log(this.listElement);
+    const list = await this.dataSource.getData(this.category);
     let limitItems = limitNumberoFItems(list, 2);
     // render the list
     this.renderList(limitItems);
-    //this.listElement.innerHTML = htmlItems.join("");
   }
 }
