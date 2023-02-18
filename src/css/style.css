@@ -202,6 +202,20 @@ button {
   grid-column: 3;
 }
 
+.product-categories{
+  margin: auto;
+  width: 65%;
+  display: flex;
+  justify-content: center;
+}
+.product-categories img{
+  width: 100%;
+  margin: auto;
+}
+.product-categories div figcaption {
+  text-align: center;
+}
+
 @media screen and (min-width: 500px) {
   body {
     max-width: 1080px;
@@ -214,6 +228,9 @@ button {
     font-size: inherit;
     grid-template-columns: 150px auto 15%;
   }
+  .product-categories {
+  }
+
 }
 
 footer {
