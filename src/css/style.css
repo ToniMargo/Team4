@@ -202,13 +202,13 @@ button {
   grid-column: 3;
 }
 
-.product-categories{
+.product-categories {
   margin: auto;
   width: 65%;
   display: flex;
   justify-content: center;
 }
-.product-categories img{
+.product-categories img {
   width: 100%;
   margin: auto;
 }
@@ -230,7 +230,6 @@ button {
   }
   .product-categories {
   }
-
 }
 
 footer {
