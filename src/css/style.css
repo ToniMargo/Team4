@@ -122,6 +122,16 @@ button {
 .products {
   padding: 0.5em;
 }
+.products ul li{
+  list-style-type: none;
+}
+.products img{
+  width: 6rem;
+}
+.product-grid{
+  display: flex;
+  justify-content: space-between;
+}
 .product-list {
   display: flex;
   flex-flow: row wrap;
