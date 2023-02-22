@@ -124,6 +124,7 @@ button {
 }
 .products ul li{
   list-style-type: none;
+  text-align: center;
 }
 .products img{
   width: 6rem;
