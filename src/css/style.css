@@ -261,6 +261,7 @@ button {
 }
 .alert{
   margin-top:.5rem;
+  margin: 1rem;
   background-color: #f0a868;
   border: 1px solid orangered;
   padding: .1rem;
