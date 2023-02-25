@@ -228,6 +228,53 @@ button {
   text-align: center;
 }
 
+.divider-checkout{
+  max-width: 500px;
+  margin: 0 auto;
+}
+.divider-checkout h2{
+  margin: 1rem;
+}
+.checkout-form fieldset{
+  padding: 2rem;
+  line-height: 1.7rem;
+  margin: 1rem;
+}
+.checkout-form fieldset legend,label{
+  text-align: left;
+}
+.checkout-form input{
+  width: 100%;
+  background-color: #a4b8c4;
+  border: none;
+  height: 1.5rem;
+  border-radius: 5px;
+  padding: .5rem;
+}
+.checkout-form input:focus{
+  background-color: #f0a868;
+  font-weight: bold;
+  padding: .8rem;
+}
+#checkoutSubmit{
+  margin-top: 1rem;
+}
+.alert{
+  margin-top:.5rem;
+  background-color: #f0a868;
+  border: 1px solid orangered;
+  padding: .1rem;
+  font-weight: bold;
+  display: flex;
+  justify-content: right;
+}
+.alert p{
+  max-width: 100%;
+  margin-right: 1rem;
+}
+.alert span{
+  padding: 1rem;
+}
 @media screen and (min-width: 500px) {
   body {
     max-width: 1080px;
